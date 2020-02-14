@@ -2,6 +2,8 @@ function checkURL(inputText) {
     console.log("::: Running checkURL :::", inputText);
     if (!validateURL(inputText)) {
         alert('Please enter a valid URL in the form of "http://example.com" or "https://example.com".');
+    } else {
+        return true
     }
 
 // This function is from https://stackoverflow.com/questions/161738/what-is-the-best-regular-expression-to-check-if-a-string-is-a-valid-url (user1524615)

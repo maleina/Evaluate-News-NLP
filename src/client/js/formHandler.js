@@ -1,16 +1,35 @@
 function handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
+
 
     // check what text was put into the form field
-    let formText = document.getElementById('url').value
-    Client.checkURL(formText)
+    let formText = document.getElementById('url').value;
 
-    console.log("::: Form Submitted :::")
-    fetch('http://localhost:8081/test')
-    .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
-    })
+    if (Client.checkURL(formText)){
+        console.log("::: Form Submitted :::");
+
+        const updateUI = (res) => {
+            document.getElementById('polarity').innerHTML = `Polarity: ${res.polarity}`
+            document.getElementById('subjectivity').innerHTML = `Subjectivity: ${res.subjectivity}`
+            document.getElementById('text').innerHTML = `Text: <br>${res.text}`
+        }
+
+        const analyzeURL = async (url = '', data = {}) => {
+            const response = await fetch(url, {
+                    method: 'POST',
+                    credentials: 'same-origin',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(res => res.json())
+                .then(updateUI)
+                .catch(err => console.log(err))
+            }
+
+        analyzeURL('http://localhost:8081/analysis', {'urlToAn': formText});
+    }
 }
 
 export { handleSubmit }
