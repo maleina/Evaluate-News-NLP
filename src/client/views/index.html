@@ -2,23 +2,25 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
-
+        <title>News or Opinion</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
 
         <header>
-            <div class="">
-                Logo
+            <div class="logo">
+                News or Opinion?
             </div>
-            <div class="">
-                navigation
+            <div class="navbar">
             </div>
         </header>
 
         <main>
             <section>
+                <p>Don't mistake opinion for news again. Enter a news article URL in the box below to analyze it's subjectivity.</p>
+                <br>
+                <br>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
                     <input id="url" type="text" name="input" value="" placeholder="http://">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
@@ -26,17 +28,20 @@
             <section>
 
             <section>
-                <strong>Analysis Results:</strong>
                 <div id="results">
+                    <div id="results-heading"></div>
+                    <br>
                     <div id="polarity"></div>
+                    <br>
                     <div id="subjectivity"></div>
+                    <br>
                     <div id="text"></div>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Text analysis performed via <a href="https://aylien.com/">Aylien</a></p>
         </footer>
 
     </body>

@@ -14,5 +14,5 @@ export {
 
 console.log(checkURL);
 
-alert("I EXIST")
+/*alert("I EXIST")*/
 console.log("CHANGE!!");
