@@ -40,8 +40,8 @@ if (port == null || port == "") {
 }
 app.listen(port);
 */
-app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
+app.listen(8000, function () {
+    console.log('Example app listening on port 8000!')
 })
 
 app.get('/test', function (req, res) {
