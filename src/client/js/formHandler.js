@@ -12,7 +12,9 @@ function handleSubmit(event) {
             document.getElementById('results-box').style.display = "block";
             document.getElementById('polarity').innerHTML = `Polarity: ${res.polarity}`
             document.getElementById('subjectivity').innerHTML = `Subjectivity: ${res.subjectivity}`
-            document.getElementById('text').innerHTML = `Text: <br>${res.text}`
+            document.getElementById('text').innerHTML = `Text: <br><br>${res.text}`
+            document.getElementById('submit-btn').style.display = "none";
+            document.getElementById('reset-btn').style.display = "block";
         }
 
         const analyzeURL = async (url = '', data = {}) => {

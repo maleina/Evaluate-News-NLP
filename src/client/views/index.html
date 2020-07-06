@@ -17,12 +17,12 @@
 
         <main>
             <section id="submit-box">
-
                 <form class="" onsubmit="return Client.handleSubmit(event)">
                     <h2>Don't mistake opinion for news again. Enter a news article URL in the box below to analyze it's subjectivity.</h2>
                     <br>
                     <input id="url" type="text" name="input" value="" placeholder="http://">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input id="submit-btn" type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input id="reset-btn" type="reset" value="Reset" onClick="window.location.reload()">
                 </form>
             <section>
 
