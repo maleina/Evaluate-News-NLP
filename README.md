@@ -73,3 +73,7 @@ var textapi = new aylien({
 ### Step 5: Using the API
 
 The API has a lot of different endpoints you can take a look at [here](https://docs.aylien.com/textapi/endpoints/#api-endpoints). 
+
+## Future Work to be Completed:
+
+The design and it's responsiveness could be improved and the code should be reviewed for refactoring.
