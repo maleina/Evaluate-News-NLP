@@ -31,7 +31,7 @@ function handleSubmit(event) {
                 .catch(err => console.log(err))
             }
 
-        analyzeURL('http://localhost:8000/analysis', {'urlToAn': formText});
+        analyzeURL('/analysis', {'urlToAn': formText});
     }
 }
 
