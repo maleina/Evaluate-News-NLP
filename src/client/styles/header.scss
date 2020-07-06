@@ -1,12 +1,17 @@
+@import "_variables.scss";
+
 header {
+    position: fixed;
+    width: 100%;
     display: flex;
     /*justify-content: space-between;*/
     justify-content: center;
     padding: 10px 40px;
+    background: map-get($colors , main);
 }
 
 .logo {
     font-family: 'Lobster', cursive;
     font-size: 3rem;
-    color: #057DCD;
+    color: black;
 }

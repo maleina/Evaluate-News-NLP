@@ -1,21 +1,17 @@
-$colors: (
-    main: #74b9ff,
-    secondary: #ebf5ff,
-    offwhite: #F5F5F5
-);
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap');
+@import "_variables.scss";
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: map-get($colors, offwhite);
     font-family: 'Roboto', sans-serif;
+    background-image: url("../img/rishabh-sharma-R-js25Pv1LQ-unsplash.jpg");
+    background-size: cover;
 }
 
 main {
     flex: 2;
-}
-
-section {
     max-width: 800px;
     margin: 50px auto;
 }

@@ -9,7 +9,7 @@ function handleSubmit(event) {
         console.log("::: Form Submitted :::");
 
         const updateUI = (res) => {
-            document.getElementById('results-heading').innerHTML = `Analysis Results:`
+            document.getElementById('results-box').style.display = "block";
             document.getElementById('polarity').innerHTML = `Polarity: ${res.polarity}`
             document.getElementById('subjectivity').innerHTML = `Subjectivity: ${res.subjectivity}`
             document.getElementById('text').innerHTML = `Text: <br>${res.text}`

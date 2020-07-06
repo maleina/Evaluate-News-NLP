@@ -1,6 +1,14 @@
+@import "_variables.scss";
+
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    margin: 1rem;
+    margin: 0;
+    padding: 1rem;
+    background: map-get($colors , main);
 
     a {
         text-decoration: none;

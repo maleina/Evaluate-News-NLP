@@ -1,7 +1,25 @@
-form {
+@import "_variables.scss";
+
+#submit-box,
+#results-box {
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
+    background: map-get($colors , offwhite);
+
+    h2 {
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+#submit-box {
+    margin-top: 4rem;
+}
+
+#results-box {
+    display: none;
+    margin-top: 1rem;
 }
 
 input {
@@ -10,3 +28,5 @@ input {
     line-height: 16px;
     margin: 10px 0;
 }
+
+

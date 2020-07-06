@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>News or Opinion</title>
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -17,19 +16,19 @@
         </header>
 
         <main>
-            <section>
-                <p>Don't mistake opinion for news again. Enter a news article URL in the box below to analyze it's subjectivity.</p>
-                <br>
-                <br>
+            <section id="submit-box">
+
                 <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <h2>Don't mistake opinion for news again. Enter a news article URL in the box below to analyze it's subjectivity.</h2>
+                    <br>
                     <input id="url" type="text" name="input" value="" placeholder="http://">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
-            <section>
+            <section id="results-box">
                 <div id="results">
-                    <div id="results-heading"></div>
+                    <h2>Analysis Results</h2>
                     <br>
                     <div id="polarity"></div>
                     <br>

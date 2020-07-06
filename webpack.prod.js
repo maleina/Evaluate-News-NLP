@@ -18,6 +18,12 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|jpg|jpeg|gif|ico|svg)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
+            {
                 test: '/\.js$/',
                 exclude: /node_modules/,
                 loader: "babel-loader"
