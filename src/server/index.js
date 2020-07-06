@@ -33,14 +33,14 @@ app.get('/', function (req, res) {
 
 
 // designates what port the app will listen to for incoming requests
-/*let port = process.env.PORT;
+let port = process.env.PORT;
 if (port == null || port == "") {
   port = 8000;
 }
-app.listen(port);*/
-app.listen(8000, function () {
+app.listen(port);
+/*app.listen(8000, function () {
     console.log('Example app listening on port 8000!')
-})
+})*/
 
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
