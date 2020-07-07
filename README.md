@@ -1,6 +1,6 @@
 # Project Instructions
 
-This project was undertaken as part of Udacity's Front End Developer Nanodegree program.
+This project was started as part of Udacity's Front End Developer Nanodegree program. I have since expended upon it on my own.
 
 The goals of this project were to practice:
 - Setting up Webpack
