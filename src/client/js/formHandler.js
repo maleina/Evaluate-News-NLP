@@ -37,4 +37,15 @@ function handleSubmit(event) {
     }
 }
 
-export { handleSubmit }
+function handleReset(event) {
+    event.preventDefault();
+    document.getElementById('results-box').style.display = "none";
+    document.getElementById('url').value = '';
+    document.getElementById('polarity').innerHTML = '';
+    document.getElementById('subjectivity').innerHTML = '';
+    document.getElementById('text').innerHTML = '';
+    document.getElementById('submit-btn').style.display = "block";
+    document.getElementById('reset-btn').style.display = "none";
+}
+
+export { handleSubmit, handleReset }

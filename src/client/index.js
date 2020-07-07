@@ -1,5 +1,5 @@
 import { checkURL } from './js/urlChecker'
-import { handleSubmit } from './js/formHandler'
+import { handleSubmit, handleReset } from './js/formHandler'
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -9,7 +9,8 @@ import './styles/header.scss'
 
 export {
 	checkURL,
-	handleSubmit
+	handleSubmit,
+	handleReset
 }
 
 console.log(checkURL);
