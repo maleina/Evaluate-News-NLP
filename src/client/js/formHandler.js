@@ -7,8 +7,10 @@ function handleSubmit(event) {
 
     if (Client.checkURL(formText)){
         console.log("::: Form Submitted :::");
+        document.getElementById('waiting-box').style.display = "block";
 
         const updateUI = (res) => {
+            document.getElementById('waiting-box').style.display = "none";
             document.getElementById('results-box').style.display = "block";
             document.getElementById('polarity').innerHTML = `Polarity: ${res.polarity}`
             document.getElementById('subjectivity').innerHTML = `Subjectivity: ${res.subjectivity}`

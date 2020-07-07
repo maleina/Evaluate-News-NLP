@@ -2,3 +2,13 @@ node_modules
 dist
 .env
 .DS_Store
+src/client/styles/base.css
+src/client/styles/base.css.map
+src/client/styles/footer.css
+src/client/styles/footer.css.map
+src/client/styles/form.css
+src/client/styles/form.css.map
+src/client/styles/header.css
+src/client/styles/header.css.map
+src/client/styles/resets.css
+src/client/styles/resets.css.map

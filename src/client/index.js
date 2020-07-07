@@ -15,4 +15,4 @@ export {
 console.log(checkURL);
 
 /*alert("I EXIST")*/
-console.log("CHANGE!!");
+console.log("Loading Page");
