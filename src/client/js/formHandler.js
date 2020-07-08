@@ -15,7 +15,7 @@ function handleSubmit(event) {
             document.getElementById('results-box').style.display = "block";
             document.getElementById('polarity').innerHTML = `<em>Polarity:</em> ${res.polarity}`
             document.getElementById('subjectivity').innerHTML = `<em>Subjectivity:</em> ${res.subjectivity}`
-            document.getElementById('text').innerHTML = `<em>Text:</em> <br><br>${res.text}`
+            document.getElementById('text').innerHTML = `<em>Text:</em> <br>${res.text}`
             document.getElementById('submit-btn').style.display = "none";
             document.getElementById('reset-btn').style.display = "block";
         }
@@ -41,6 +41,7 @@ function handleSubmit(event) {
 function handleReset(event) {
     event.preventDefault();
     document.getElementById('results-box').style.display = "none";
+    document.getElementById('key').style.display = "none";
     document.getElementById('url').value = '';
     document.getElementById('polarity').innerHTML = '';
     document.getElementById('subjectivity').innerHTML = '';
