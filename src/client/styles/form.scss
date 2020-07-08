@@ -39,4 +39,31 @@ input {
     margin: 10px 0;
 }
 
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.button {
+    background: map-get($colors , main);
+    color: black;
+    font: inherit;
+    border: 1px solid black;
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 10px 5px;
+    line-height: 16px;
+    cursor: pointer;
+  }
+  
+  .button:hover,
+  .button:active {
+    background: darkgray;
+    color: var(--dark-green);
+  }
+  
+  .button:focus {
+    outline: none;
+  }
