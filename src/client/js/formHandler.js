@@ -11,6 +11,7 @@ function handleSubmit(event) {
 
         const updateUI = (res) => {
             document.getElementById('waiting-box').style.display = "none";
+            document.getElementById('key').style.display = "block";
             document.getElementById('results-box').style.display = "block";
             document.getElementById('polarity').innerHTML = `<em>Polarity:</em> ${res.polarity}`
             document.getElementById('subjectivity').innerHTML = `<em>Subjectivity:</em> ${res.subjectivity}`

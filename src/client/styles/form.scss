@@ -2,7 +2,8 @@
 
 #submit-box,
 #waiting-box,
-#results-box {
+#results-box,
+#key {
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
@@ -19,16 +20,22 @@
 }
 
 #waiting-box,
-#results-box {
+#results-box,
+#key {
     display: none;
     margin-top: 1rem;
+}
+
+#key {
+    padding: 10px 40px;
 }
 
 #reset-btn {
     display: none;
 }
 
-#results-box em {
+#results-box em,
+#key em {
     font-weight: bold;
 }
 
