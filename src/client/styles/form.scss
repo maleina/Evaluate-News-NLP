@@ -5,7 +5,6 @@
 #results-box,
 #key {
     border-radius: 10px;
-    /*padding: 40px;*/
     padding: 20px 40px;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
@@ -31,14 +30,6 @@
     }
 }
 
-#submit-box {
-    margin-top: 4rem;
-}
-
-#reset-btn {
-    display: none;
-}
-
 #waiting-box,
 #results-box,
 #key {
@@ -47,12 +38,24 @@
     line-height: 2rem;
 }
 
+#submit-box {
+    margin-top: 4rem;
+}
+
+#reset-btn {
+    display: none;
+}
+
 #key {
     padding: 10px 40px;
 
     h2 {
       margin-bottom: 1rem;
     }
+}
+
+.logo {
+  text-align: center;
 }
 
 input {
@@ -66,9 +69,6 @@ input:focus {
   outline: none;
 }
 
-.logo {
-  text-align: center;
-}
 
 .btn-container,
 .loader-container {
@@ -90,23 +90,22 @@ input:focus {
     cursor: pointer;
     outline: none;
     box-shadow: 0 0.2rem rgba(121, 121, 121, 0.65);
-  }
-  
-  .button:hover,
-  .button:active {
-    background: darkgray;
+
+    &:hover,
+    &:active {
+      background: darkgray;
+    }
+
+    &:active {
+      transform: translate(0, 0.3rem);
+      box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
-  .button:active {
-    transform: translate(0, 0.3rem);
-    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
-  }
-  
-  .button:focus {
-    outline: none;
-  }
-
-  /* Loader */
 .loader {
     border: 8px solid #f3f3f3;
     border-top: 8px solid #333; 

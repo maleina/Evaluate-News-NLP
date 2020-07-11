@@ -1,21 +1,32 @@
+// Helper functions to manipulate page elements
+function setDisplayValue (element, value) {
+    document.getElementById(element).style.display = value;
+}
+
+function setInnerHtml (element, value) {
+    document.getElementById(element).innerHTML = value;
+}
+
+//Event Handlers
 function handleSubmit(event) {
     event.preventDefault();
 
     let formText = document.getElementById('url').value;
 
     if (Client.checkURL(formText)){
-        console.log("::: Form Submitted :::");
-        document.getElementById('waiting-box').style.display = "block";
+        setDisplayValue('waiting-box', "block");
 
         const updateUI = (res) => {
-            document.getElementById('waiting-box').style.display = "none";
-            document.getElementById('key').style.display = "block";
-            document.getElementById('results-box').style.display = "block";
-            document.getElementById('polarity').innerHTML = `<em>Polarity:</em> ${res.polarity}`
-            document.getElementById('subjectivity').innerHTML = `<em>Subjectivity:</em> ${res.subjectivity}`
-            document.getElementById('text').innerHTML = `<em>Text:</em> <br>${res.text}`
-            document.getElementById('submit-btn').style.display = "none";
-            document.getElementById('reset-btn').style.display = "block";
+            setDisplayValue('waiting-box', "none");
+            setDisplayValue('key', "block");
+            setDisplayValue('results-box', "block");
+            setDisplayValue('submit-btn', "none");
+            setDisplayValue('reset-btn', "block");
+            setInnerHtml('polarity', `<em>Polarity:</em> ${res.polarity}`);
+            setInnerHtml('subjectivity', `<em>Subjectivity:</em> ${res.subjectivity}`);
+            setInnerHtml('text', `<em>Text:</em> <br>${res.text}`);
+            
+
         }
 
         const analyzeURL = async (url = '', data = {}) => {
@@ -38,14 +49,15 @@ function handleSubmit(event) {
 
 function handleReset(event) {
     event.preventDefault();
-    document.getElementById('results-box').style.display = "none";
-    document.getElementById('key').style.display = "none";
+    setDisplayValue('results-box', "none");
+    setDisplayValue('key', "none");
     document.getElementById('url').value = '';
-    document.getElementById('polarity').innerHTML = '';
-    document.getElementById('subjectivity').innerHTML = '';
-    document.getElementById('text').innerHTML = '';
-    document.getElementById('submit-btn').style.display = "block";
-    document.getElementById('reset-btn').style.display = "none";
+    setInnerHtml('polarity', '');
+    setInnerHtml('subjectivity', '');
+    setInnerHtml('text', '');
+    setDisplayValue('submit-btn', "block");
+    setDisplayValue('reset-btn', "none");
+
 }
 
 export { handleSubmit, handleReset }

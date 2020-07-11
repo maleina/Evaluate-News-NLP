@@ -1,5 +1,5 @@
+// Function to validate the user submitted news story URL
 function checkURL(inputText) {
-    console.log("::: Running checkURL :::", inputText);
     if (!validateURL(inputText)) {
         alert('Please enter a valid URL in the form of "http://example.com" or "https://example.com".');
     } else {
