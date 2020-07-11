@@ -9,7 +9,7 @@
     <body>
         <header>
             <div class="logo">
-                News or Opinion?
+               <h1> News or Opinion?<h1>
             </div>
             <div class="navbar">
             </div>
@@ -18,7 +18,8 @@
         <main>
             <section id="submit-box">
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <h2>Don't mistake opinion for news again. Copy a news article URL in the box below to analyze it's subjectivity.</h2>
+                    <h2>Don't mistake opinion for news again.</h2>
+                    <label for="url">Copy a news article URL in the box below to analyze it's subjectivity:</label>
                     <input id="url" type="text" name="input" value="" placeholder="http://">
                     <div class="btn-container">
                         <button id="submit-btn" class="button" type="button" name="" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">Submit</button>
@@ -39,9 +40,10 @@
 
             <section id="results-box">
                 <div id="results">
-                    <h2>Analysis Results <a id="key-link" href="#key">(Key at bottom)</a></h2>
+                    <h2>Analysis Results</h2>
                     <div id="polarity"></div>
                     <div id="subjectivity"></div>
+                    <a id="key-link" href="#key"><small>See Key at Bottom</small></a>
                     <div id="text"></div>
                 </div>
             </section>

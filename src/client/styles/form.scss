@@ -5,13 +5,29 @@
 #results-box,
 #key {
     border-radius: 10px;
-    padding: 40px;
+    /*padding: 40px;*/
+    padding: 20px 40px;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
 
     h2 {
+        font-size: 1.5rem;
         font-weight: bold;
         text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    em {
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      color: darkblue;
+    }
+
+    small {
+      font-size: 0.8rem;
     }
 }
 
@@ -31,13 +47,12 @@
     line-height: 2rem;
 }
 
-#results-box em,
-#key em {
-    font-weight: bold;
-}
-
 #key {
     padding: 10px 40px;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
 }
 
 input {
@@ -45,6 +60,10 @@ input {
     width: 100%;
     line-height: 16px;
     margin: 15px 0;
+}
+
+input:focus {
+  outline: none;
 }
 
 .logo {
@@ -113,5 +132,9 @@ input {
 
     #submit-box {
       margin-top: 6rem;
+    }
+
+    #key p {
+      margin-bottom: 2rem;
     }
   }
