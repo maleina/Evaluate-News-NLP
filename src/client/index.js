@@ -13,13 +13,13 @@ export {
 	handleReset
 }
 
-const key = document.querySelector('#key-link');
+const keyLink = document.querySelector('#key-link');
 
 // Scroll to appropriate anchor ID
 function scrollToSection() {
-	key.addEventListener('click', event => {
+	keyLink.addEventListener('click', event => {
 		event.preventDefault();
-		document.querySelector(event.target.hash).scrollIntoView({
+		document.querySelector('#key').scrollIntoView({
             behavior: 'smooth'
         });
 	});
