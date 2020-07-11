@@ -4,10 +4,8 @@
 #waiting-box,
 #results-box,
 #key {
-    /*border: 1px solid #545454;*/
     border-radius: 10px;
     padding: 40px;
-    /*background: map-get($colors , offwhite);*/
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
 
@@ -46,7 +44,11 @@ input {
     padding: 5px 20px;
     width: 100%;
     line-height: 16px;
-    margin: 10px 0;
+    margin: 15px 0;
+}
+
+.logo {
+  text-align: center;
 }
 
 .btn-container,
@@ -64,7 +66,7 @@ input {
     padding: 5px 20px;
     border-radius: 8px;
     font-weight: bold;
-    margin: 10px 5px;
+    margin: 0;
     line-height: 16px;
     cursor: pointer;
     outline: none;
@@ -98,4 +100,18 @@ input {
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+  @media screen and (max-width: 600px) {
+    #submit-box,
+    #waiting-box,
+    #results-box,
+    #key {
+      margin-right: 0.7rem;
+      margin-left: 0.7rem;
+    }
+
+    #submit-box {
+      margin-top: 6rem;
+    }
   }

@@ -13,10 +13,6 @@ export {
 	handleReset
 }
 
-console.log(checkURL);
-
-console.log("Loading Page");
-
 const key = document.querySelector('#key-link');
 
 // Scroll to appropriate anchor ID
