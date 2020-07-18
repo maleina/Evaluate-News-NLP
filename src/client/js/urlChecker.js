@@ -1,8 +1,13 @@
 // Function to validate the user submitted news story URL
 function checkURL(inputText) {
+    let urlEl = document.getElementById('url');
     if (!validateURL(inputText)) {
-        alert('Please enter a valid URL in the form of "http://example.com" or "https://example.com".');
+        //alert('Please enter a valid URL in the form of "http://example.com" or "https://example.com".');
+        urlEl.setCustomValidity('Please enter a valid URL in the form of "http://example.com" or "https://example.com".');
+        urlEl.reportValidity();
     } else {
+        urlEl.setCustomValidity('');
+        urlEl.reportValidity();
         return true
     }
 
