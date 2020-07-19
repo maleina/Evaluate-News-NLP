@@ -43,7 +43,9 @@
 }
 
 #reset-btn {
-    display: none;
+    display: block;
+    padding-right: 23px;
+    padding-left: 23px;
 }
 
 #key {
@@ -85,7 +87,7 @@ input:focus {
     padding: 5px 20px;
     border-radius: 8px;
     font-weight: bold;
-    margin: 0;
+    margin: 0 5px;
     line-height: 16px;
     cursor: pointer;
     outline: none;

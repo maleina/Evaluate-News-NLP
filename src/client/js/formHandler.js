@@ -54,7 +54,7 @@ function handleReset(event) {
     setInnerHtml('subjectivity', '');
     setInnerHtml('text', '');
     setDisplayValue('submit-btn', "block");
-    setDisplayValue('reset-btn', "none");
+    /*setDisplayValue('reset-btn', "none");*/
 }
 
 export { handleSubmit, handleReset }
