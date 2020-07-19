@@ -47,6 +47,7 @@ function handleSubmit(event) {
 
 function handleReset(event) {
     event.preventDefault();
+    setDisplayValue('waiting-box', "none");
     setDisplayValue('results-box', "none");
     setDisplayValue('key', "none");
     document.getElementById('url').value = '';
