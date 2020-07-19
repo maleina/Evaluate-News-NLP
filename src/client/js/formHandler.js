@@ -25,8 +25,6 @@ function handleSubmit(event) {
             setInnerHtml('polarity', `<em>Polarity:</em> ${res.polarity}`);
             setInnerHtml('subjectivity', `<em>Subjectivity:</em> ${res.subjectivity}`);
             setInnerHtml('text', `<em>Text:</em> <br>${res.text}`);
-            
-
         }
 
         const analyzeURL = async (url = '', data = {}) => {
@@ -57,7 +55,6 @@ function handleReset(event) {
     setInnerHtml('text', '');
     setDisplayValue('submit-btn', "block");
     setDisplayValue('reset-btn', "none");
-
 }
 
 export { handleSubmit, handleReset }
