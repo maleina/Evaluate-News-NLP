@@ -13,7 +13,7 @@ function handleSubmit(event) {
 
     let formText = document.getElementById('url').value;
 
-    if (Client.checkURL(formText)){
+    if (Client.checkURLFormat()){
         setDisplayValue('waiting-box', "block");
 
         const updateUI = (res) => {

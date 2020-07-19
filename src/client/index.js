@@ -1,4 +1,4 @@
-import { checkURL } from './js/urlChecker'
+import { checkURLFormat } from './js/urlChecker'
 import { handleSubmit, handleReset } from './js/formHandler'
 
 import './styles/resets.scss'
@@ -8,7 +8,7 @@ import './styles/footer.scss'
 import './styles/header.scss'
 
 export {
-	checkURL,
+	checkURLFormat,
 	handleSubmit,
 	handleReset
 }
