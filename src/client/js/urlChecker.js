@@ -10,7 +10,7 @@ function checkURLFormat() {
     }
 
     if (!isURLValid(urlEl.value)) {
-        urlEl.setCustomValidity('Please enter a valid URL in the form of "http://example.com" or "https://example.com".');
+        urlEl.setCustomValidity('URL should be in the form of "https://example.com/newsstory".');
         urlEl.reportValidity();
     } else {
         urlEl.setCustomValidity('');
