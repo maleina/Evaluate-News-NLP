@@ -58,8 +58,6 @@ function handleReset(event) {
     setInnerHtml('subjectivity', '');
     setInnerHtml('text', '');
     removeInactiveClass('submit-btn');
-
-
 }
 
 export { handleSubmit, handleReset }
