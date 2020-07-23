@@ -1,10 +1,14 @@
 // Helper functions to manipulate page elements
-function setDisplayValue (element, value) {
-    document.getElementById(element).style.display = value;
+function addInactiveClass(elementId) {
+    document.getElementById(elementId).classList.add('inactive');
 }
 
-function setInnerHtml (element, value) {
-    document.getElementById(element).innerHTML = value;
+function removeInactiveClass(elementId) {
+    document.getElementById(elementId).classList.remove('inactive');
+}
+
+function setInnerHtml (elementId, value) {
+    document.getElementById(elementId).innerHTML = value;
 }
 
 //Event Handlers
@@ -14,14 +18,13 @@ function handleSubmit(event) {
     let formText = document.getElementById('url').value;
 
     if (Client.checkURLFormat()){
-        setDisplayValue('waiting-box', "block");
+        removeInactiveClass('waiting-box');
 
         const updateUI = (res) => {
-            setDisplayValue('waiting-box', "none");
-            setDisplayValue('key', "block");
-            setDisplayValue('results-box', "block");
-            setDisplayValue('submit-btn', "none");
-            setDisplayValue('reset-btn', "block");
+            addInactiveClass('waiting-box');
+            removeInactiveClass('key');
+            removeInactiveClass('results-box');
+            addInactiveClass('submit-btn');
             setInnerHtml('polarity', `<em>Polarity:</em> ${res.polarity}`);
             setInnerHtml('subjectivity', `<em>Subjectivity:</em> ${res.subjectivity}`);
             setInnerHtml('text', `<em>Text:</em> <br>${res.text}`);
@@ -47,15 +50,16 @@ function handleSubmit(event) {
 
 function handleReset(event) {
     event.preventDefault();
-    setDisplayValue('waiting-box', "none");
-    setDisplayValue('results-box', "none");
-    setDisplayValue('key', "none");
+    addInactiveClass('waiting-box');
+    addInactiveClass('results-box');
+    addInactiveClass('key');
     document.getElementById('url').value = '';
     setInnerHtml('polarity', '');
     setInnerHtml('subjectivity', '');
     setInnerHtml('text', '');
-    setDisplayValue('submit-btn', "block");
-    /*setDisplayValue('reset-btn', "none");*/
+    removeInactiveClass('submit-btn');
+
+
 }
 
 export { handleSubmit, handleReset }

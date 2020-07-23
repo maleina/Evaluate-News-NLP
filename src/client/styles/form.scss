@@ -33,7 +33,7 @@
 #waiting-box,
 #results-box,
 #key {
-    display: none;
+    /*display: none;*/
     margin-top: 1rem;
     line-height: 2rem;
 }
@@ -95,7 +95,6 @@ input:focus {
 
     &:hover,
     &:active {
-      /*background: darkgray;*/
       background: map-get($colors , main);
       color: white;
     }
@@ -140,4 +139,8 @@ input:focus {
     #key p {
       margin-bottom: 2rem;
     }
+  }
+
+  .inactive {
+    display: none;
   }
