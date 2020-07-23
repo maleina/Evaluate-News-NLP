@@ -14,15 +14,17 @@ export {
 }
 
 const keyLink = document.querySelector('#key-link');
+const form = document.querySelector('form');
+const submitBtn = document.querySelector('#submit-btn');
+const resetBtn = document.querySelector('#reset-btn');
 
-// Scroll to appropriate anchor ID
-function scrollToSection() {
-	keyLink.addEventListener('click', event => {
-		event.preventDefault();
-		document.querySelector('#key').scrollIntoView({
-            behavior: 'smooth'
-        });
+form.addEventListener('submit', handleSubmit);
+submitBtn.addEventListener('click', handleSubmit);
+submitBtn.addEventListener('submit', handleSubmit);
+resetBtn.addEventListener('click', handleReset);
+keyLink.addEventListener('click', event => {
+	event.preventDefault();
+	document.querySelector('#key').scrollIntoView({
+		behavior: 'smooth'
 	});
-}
-
-scrollToSection();
+});

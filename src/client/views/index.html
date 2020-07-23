@@ -18,13 +18,14 @@
 
         <main>
             <section id="submit-box">
-                <form class="" onsubmit="return Client.handleSubmit(event)">
+                <form>
                     <h2>Don't mistake opinion for news again.</h2>
                     <label for="url">Paste a news article URL in the box below to analyze its subjectivity:</label>
                     <input id="url" type="text" name="input" value="" placeholder="http://">
                     <div class="btn-container">
-                        <button id="submit-btn" class="button" type="button" name="" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">Submit</button>
-                        <button id="reset-btn" class="button" type="button" onclick="return Client.handleReset(event)">Reset</button>
+                        <button id="submit-btn" class="button" type="button" name="">Submit</button>                        
+                        <button id="reset-btn" class="button" type="button">Reset</button>
+
                     </div>
 
                 </form>
@@ -32,7 +33,6 @@
 
             <section id="waiting-box" class="inactive">
                 <h2>Computing results ...</h2>
-                <!-- Loader -->
                 <div class="loader-container">
                     <div class="loader" id="loader"></div>
                 </div> 
