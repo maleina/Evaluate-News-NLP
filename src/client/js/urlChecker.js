@@ -12,10 +12,11 @@ function checkURLFormat() {
     if (!isURLValid(urlEl.value)) {
         urlEl.setCustomValidity('URL should be in the form of "https://example.com/newsstory".');
         urlEl.reportValidity();
+        return false;
     } else {
         urlEl.setCustomValidity('');
         urlEl.reportValidity();
-        return true
+        return true;
     }
 }
 export { checkURLFormat }
