@@ -76,4 +76,6 @@ The API has a lot of different endpoints you can take a look at [here](https://d
 
 ## Future Work to be Completed:
 
-The design and it's responsiveness could be improved and the code should be reviewed for refactoring.
+- Add proper error handling for when requested URL is formatted correctly, but does not actually exist.
+- The design could be improved.
+- The code should be reviewed for refactoring.
