@@ -44,7 +44,7 @@ app.post('/analysis', function (req, res) {
 	}, function(error, response) {
   		if (error === null) {
     		res.send(response);
-  		} {
+  		} else {
 			console.log(error);
   		}
 	});
