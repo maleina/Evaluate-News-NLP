@@ -30,8 +30,8 @@ function handleSubmit(event) {
             setInnerHtml('text', `<em>Text:</em> <br>${res.text}`);
         }
 
-        const analyzeURL = async (url = '', data = {}) => {
-            await fetch(url, {
+        const analyzeURL = (url = '', data = {}) => {
+            fetch(url, {
                     method: 'POST',
                     credentials: 'same-origin',
                     headers: {
