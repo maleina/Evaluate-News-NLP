@@ -31,7 +31,7 @@ function handleSubmit(event) {
         }
 
         const analyzeURL = async (url = '', data = {}) => {
-            const response = await fetch(url, {
+            await fetch(url, {
                     method: 'POST',
                     credentials: 'same-origin',
                     headers: {
