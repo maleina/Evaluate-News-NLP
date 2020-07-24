@@ -20,7 +20,6 @@ const resetBtn = document.querySelector('#reset-btn');
 
 form.addEventListener('submit', handleSubmit);
 submitBtn.addEventListener('click', handleSubmit);
-submitBtn.addEventListener('submit', handleSubmit);
 resetBtn.addEventListener('click', handleReset);
 keyLink.addEventListener('click', event => {
 	event.preventDefault();
