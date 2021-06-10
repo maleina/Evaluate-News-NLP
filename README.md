@@ -77,5 +77,5 @@ The API has a lot of different endpoints you can take a look at [here](https://d
 ## Future Work to be Completed:
 
 - Add proper error handling for when requested URL is formatted correctly, but does not actually exist.
-- The design could be improved.
+- The page design could be improved.
 - The code should be reviewed for refactoring.
